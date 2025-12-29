@@ -1,0 +1,4 @@
+- [x] Add JavaScript to main.js to populate weather table with sample data
+- [x] Add HTML table structure in index.html after the search box
+- [x] Add CSS styles for the weather table in style.css
+- [x] Test the page by opening index.html in browser

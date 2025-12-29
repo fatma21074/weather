@@ -1,0 +1,242 @@
+*{
+      font-family: "Caveat", cursive;
+       font-optical-sizing: auto;
+        font-style: normal;
+        font-size: medium;
+}
+:root{
+    --main-color:#003E74;
+   --secondary-color:#fcf9f9;
+    --accent-color:#6259b6;
+    --glow-color:#4a91e262;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.13);
+}
+/* sart nav */
+#navbarSection {
+  height: 80px;
+}
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.01rem;
+}
+
+.navbar-brand img{
+    height: 45px;
+    width: auto;
+    vertical-align: middle;
+}
+
+.border{
+    background-color: white;
+    color: black;
+    transition: all 1s;
+    
+    
+}
+.border:hover{
+    background-color: blue;
+    color: white;
+}
+/* end nav */
+
+/* sart header */
+#header{
+    background: linear-gradient(rgba(0, 0, 0, 0.315)), url("../images/verkkoon_shutterstock_1390294940_kollaasi_ukkonen_aurinko_pilvet.png");
+    background-position: center;
+    background-size: cover;
+     min-height: 100vh;
+     padding-top: 90px;    
+     padding-bottom: 60px;
+    display: flex;
+    justify-content: center;   
+    align-items: center;
+}
+.search-box {
+  padding: 15px;
+  border-radius: 20px;
+}
+#search-input {
+  border-radius: 30px;
+  padding: 12px 20px;
+  border: none;
+}
+
+#search-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--glow-color);
+}
+
+/* end header */
+
+/* start cards */
+.header-custom-ligth {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.body-custom-ligth {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.header-custom-dark {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+}
+
+.body-custom-dark {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.cardimg img {
+    width: 50px;
+    height: 50px;
+}
+
+.degreeAfter h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+.degreeAfter small {
+    color: #ccc;
+}
+
+.degreeAfter p {
+    margin-top: 0.5rem;
+    
+}
+.weather-card {
+  border-radius: 25px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.weather-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+
+
+
+/* end cards */
+ /* start footer */
+#footer{
+background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%)  ;
+    background-color: white;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+     padding: 50px 20px;
+     position: relative;
+     overflow: hidden;
+
+  }
+ 
+#footer .demo{
+    color: var(--main-color);
+    transition: all 0.3s ease;
+      display: flex;
+ gap: 20px;
+ align-items: center;
+ justify-content: center;
+ position: relative;
+ z-index: 1;
+}
+#footer p{
+    color: white;
+ margin: 30px 0 0 0;
+   position: relative;
+    z-index: 1;
+}
+#footer p span {
+ color: var(--main-color);
+    font-weight: bold;
+  transition: color 0.3s ease;
+}
+ #footer p span:hover {
+   color: rgb(214, 59, 59);
+  }
+  #footer .demo i {
+   font-size: 28px;
+      transition: all 0.3s ease;
+    cursor: pointer;
+  }
+#footer .demo i:hover{
+    color: var(--main-color);
+   transform: scale(1.3) rotate(5deg);
+   text-shadow: 0 0 15px rgb(255, 255, 255);
+}
+  /* end footer */
+/* loading */
+#loading{
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, var(--main-color) 0%, #e9ecef 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.loader {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 6rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .loader:before,
+  .loader:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    animation: pulsOut 1.8s ease-in-out infinite;
+    filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 0.75));
+  }
+  .loader:before {
+    width: 100%;
+    padding-bottom: 100%;
+    box-shadow: inset 0 0 0 1rem #fff;
+    animation-name: pulsIn;
+  }
+  .loader:after {
+    width: calc(100% - 2rem);
+    padding-bottom: calc(100% - 2rem);
+    box-shadow: 0 0 0 0 #fff;
+  }
+
+  @keyframes pulsIn {
+    0% {
+      box-shadow: inset 0 0 0 1rem #fff;
+      opacity: 1;
+    }
+    50%, 100% {
+      box-shadow: inset 0 0 0 0 #fff;
+      opacity: 0;
+    }
+  }
+
+  @keyframes pulsOut {
+    0%, 50% {
+      box-shadow: 0 0 0 0 #fff;
+      opacity: 0;
+    }
+    100% {
+      box-shadow: 0 0 0 1rem #fff;
+      opacity: 1;
+    }
+  }
+      

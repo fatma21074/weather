@@ -35,6 +35,8 @@ The UI is designed with a modern glassmorphism style and optimized for all scree
 ---
 
 ## 📷 Screenshots
+![Uploading image.png…]()
+
 
 > *(You can add screenshots of the app here later)*
 
